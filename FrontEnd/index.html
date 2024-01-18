@@ -18,7 +18,7 @@
 		<ul>
 			<li>projets</li>
 			<li>contact</li>
-			<li>login</li>
+			<li><a href="login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -35,12 +35,26 @@
 			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
 		</article>
 	</section>
+
+
 	<section id="portfolio">
 		<h2>Mes Projets</h2>
-		<div class="gallery" id="galerie-container">
-
+		<div id="filtres">
+		  <button class="filtre" data-categorie="0">Tous</button>
+		  <button class="filtre" data-categorie="1">Objets</button>
+		  <button class="filtre" data-categorie="2">Appartements</button>
+		  <button class="filtre" data-categorie="3">Hôtels & Restaurants</button>
 		</div>
-	</section>
+		<!-- Section pour afficher les projets -->
+		<section id="projets-section">
+		  <div class="gallery" id="galerie-container">
+	  
+		  </div>
+		</section>
+	  </section>
+
+
+
 	<section id="contact">
 		<h2>Contact</h2>
 		<p>Vous avez un projet ? Discutons-en !</p>
