@@ -10,6 +10,7 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script src="./assets/galerie.js"></script>
+	<script src="./assets/modal.js"></script>
 </head>
 <body>
 <header>
@@ -37,21 +38,28 @@
 	</section>
 
 
+
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div id="filtres">
-		  <button class="filtre" data-categorie="0">Tous</button>
-		  <button class="filtre" data-categorie="1">Objets</button>
-		  <button class="filtre" data-categorie="2">Appartements</button>
-		  <button class="filtre" data-categorie="3">Hôtels & Restaurants</button>
+		<div>
+			<h2>Mes Projets</h2>
 		</div>
+		<div id="filtres"></div>
 		<!-- Section pour afficher les projets -->
-		<section id="projets-section">
-		  <div class="gallery" id="galerie-container">
-	  
-		  </div>
-		</section>
-	  </section>
+		<div id="projets-section">
+		  <div class="gallery" id="galerie-container"></div>
+		</div>
+	</section>
+
+	<a href="#modal" class="js-modal">lien</a>
+			<aside id="modal" class="modal" style="display: none;">
+				<div class="modal-wrapper js-modal-stop">
+					<button class="js-modal-close">fermer modal</button>
+					<div class="modal-images"></div>
+				</div>
+			</aside>
+
+	
+
 
 
 
