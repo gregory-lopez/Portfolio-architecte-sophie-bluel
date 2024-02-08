@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 } */
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -215,17 +216,30 @@ footer nav ul {
 
 
 .modal-images {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.modal img {
-	width: 18%;
-	padding: 5px;
 
+.modal img {
+    width: 100%;
+}
+
+.div-photo_container {
+    width: 19%;
+    margin: 2px;
+    position: relative;
+    display: flex;
+}
+
+.div-photo_delete {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
 }
 
 

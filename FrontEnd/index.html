@@ -49,14 +49,38 @@
 		  <div class="gallery" id="galerie-container"></div>
 		</div>
 	</section>
+	
+	<!-- Modal pour les projets -->
+	<a href="#modal" class="js-modal">Modifier</a>
+	<aside id="modal" class="modal" style="display: none;">
+		<div class="modal-wrapper js-modal-stop">
+			<button class="js-modal-close">Fermer modal</button>
+			<div class="modal-images"></div>
+			<button class="js-add-article">Ajouter une photo</button>
+		</div>
+	</aside>
 
-	<a href="#modal" class="js-modal">lien</a>
-			<aside id="modal" class="modal" style="display: none;">
-				<div class="modal-wrapper js-modal-stop">
-					<button class="js-modal-close">fermer modal</button>
-					<div class="modal-images"></div>
-				</div>
-			</aside>
+	<!-- Nouvelle modal pour le formulaire d'ajout d'article -->
+	<aside id="add-article-modal" class="modal" style="display: none;">
+		<div class="modal-wrapper js-modal-stop">
+			<button class="js-modal-close">Fermer modal</button>
+			<div id="add-article-form">
+				<form action="" id="article-form">
+					<label for="title">Titre:</label><br>
+					<input type="text" id="title" name="title"><br>
+					<label for="category">Catégorie:</label><br>
+					<select id="category" name="category"></select><br>
+					<label for="image">Image:</label><br>
+					<input type="file" id="image" name="image"><br>
+					<button id="submit" class="submit">Envoyer</button>
+				</form>
+			</div>
+		</div>
+	</aside>
+
+	
+
+	
 
 	
 
