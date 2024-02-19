@@ -40,6 +40,7 @@
 
 
 	<section id="portfolio">
+		<a href="#modal" class="js-modal" style="display: none;">Modifier</a>
 		<div>
 			<h2>Mes Projets</h2>
 		</div>
@@ -51,7 +52,6 @@
 	</section>
 	
 	<!-- Modal pour les projets -->
-	<a href="#modal" class="js-modal">Modifier</a>
 	<aside id="modal" class="modal" style="display: none;">
 		<div class="modal-wrapper js-modal-stop">
 			<button class="js-modal-close">Fermer modal</button>
@@ -63,6 +63,7 @@
 	<!-- Nouvelle modal pour le formulaire d'ajout d'article -->
 	<aside id="add-article-modal" class="modal" style="display: none;">
 		<div class="modal-wrapper js-modal-stop">
+			<button class="js-modal-back">Retour</button>
 			<button class="js-modal-close">Fermer modal</button>
 			<div id="add-article-form">
 				<form action="" id="article-form">
@@ -72,20 +73,11 @@
 					<select id="category" name="category"></select><br>
 					<label for="image">Image:</label><br>
 					<input type="file" id="image" name="image"><br>
-					<button id="submit" class="submit">Envoyer</button>
+					<button id="submit-article" class="submit">Envoyer</button>
 				</form>
 			</div>
 		</div>
 	</aside>
-
-	
-
-	
-
-	
-
-
-
 
 	<section id="contact">
 		<h2>Contact</h2>

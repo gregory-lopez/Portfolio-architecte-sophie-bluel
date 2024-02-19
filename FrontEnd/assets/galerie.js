@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   // Fonction pour faire l'appel à l'API et mettre à jour la galerie
-  function fetchEtMettreAJourGalerie(categorieId = '0') {
+  window.fetchEtMettreAJourGalerie = function(categorieId = '0') {
     const worksUrl = 'http://localhost:5678/api/works';
     const categoriesUrl = 'http://localhost:5678/api/categories';
     const galerieContainer = document.getElementById('galerie-container');
