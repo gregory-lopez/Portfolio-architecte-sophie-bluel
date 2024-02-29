@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "nodemon -e scss -x 'sass style.scss style.css'"
   },
   "author": "",
   "license": "ISC",
@@ -18,12 +19,13 @@
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.4",
     "package.json": "^2.0.1",
+    "sass": "^1.71.0",
     "sequelize": "^6.19.0",
     "sqlite3": "^5.0.5",
     "swagger-ui-express": "^4.3.0",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.22"
   }
 }

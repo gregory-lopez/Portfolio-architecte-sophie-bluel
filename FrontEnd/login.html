@@ -9,33 +9,44 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/login.js"></script>
 </head>
 <body>
-    <script src="./assets/login.js"></script>
 
-<header>
-    <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-    <nav>
-        <ul>
-            <li>projets</li>
-            <li>contact</li>
-            <li>login</li>
-            <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
-        </ul>
-    </nav>
-</header>
-
+    <header>
+        <div class="banner-global">
+        <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+        <nav>
+            <ul>
+                <li>projets</li>
+                <li>contact</li>
+                <li id="js-login"><a href="login.html">login</a></li>
+                <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+<main>
+<section id="login">
+    <h2>Log In</h2>
 <form id="loginForm">
-    <label for="email">Email:</label>
+    <label for="email">E-mail:</label>
     <input type="email" id="email" name="email" required>
 
     <label for="password">Mot de passe:</label>
     <input type="password" id="password" name="password" required>
 
     <button type="button" onclick="submitForm()">Se connecter</button>
+    <a href="">Mot de passe oublié</a>
 </form>
-
-<!-- Lien vers votre fichier JavaScript -->
-
+</section>
+</main>
+<footer>
+	<nav>
+		<ul>
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
 </body>
 </html>

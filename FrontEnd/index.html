@@ -9,20 +9,23 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/316943bd81.js" crossorigin="anonymous"></script>
 	<script src="./assets/galerie.js"></script>
 	<script src="./assets/modal.js"></script>
 </head>
 <body>
 <header>
+	<div class="banner-global">
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
 			<li>projets</li>
 			<li>contact</li>
-			<li><a href="login.html">login</a></li>
+			<li id="js-login"><a href="login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
+	</div>
 </header>
 <main>
 	<section id="introduction">
@@ -40,11 +43,12 @@
 
 
 	<section id="portfolio">
-		<a href="#modal" class="js-modal" style="display: none;">Modifier</a>
-		<div>
+		<div class="portfolio_title">
 			<h2>Mes Projets</h2>
+			
 		</div>
 		<div id="filtres"></div>
+
 		<!-- Section pour afficher les projets -->
 		<div id="projets-section">
 		  <div class="gallery" id="galerie-container"></div>
@@ -54,30 +58,54 @@
 	<!-- Modal pour les projets -->
 	<aside id="modal" class="modal" style="display: none;">
 		<div class="modal-wrapper js-modal-stop">
-			<button class="js-modal-close">Fermer modal</button>
-			<div class="modal-images"></div>
-			<button class="js-add-article">Ajouter une photo</button>
+			<div class="modal-close_container">
+				<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
+			</div>
+			<div class="modal-images_title">
+				<h2>Galerie Photo</h2>
+			</div>			
+			<div class="modal-images"> 
+			</div>
+			<div class="modal-images_bar__container"><div class="modal-images_bar"></div></div>
+			
+			<div class="modal-add-article_container">
+				<button class="js-add-article">Ajouter une photo</button>
+			</div>
 		</div>
 	</aside>
 
 	<!-- Nouvelle modal pour le formulaire d'ajout d'article -->
 	<aside id="add-article-modal" class="modal" style="display: none;">
 		<div class="modal-wrapper js-modal-stop">
-			<button class="js-modal-back">Retour</button>
-			<button class="js-modal-close">Fermer modal</button>
-			<div id="add-article-form">
-				<form action="" id="article-form">
-					<label for="title">Titre:</label><br>
-					<input type="text" id="title" name="title"><br>
-					<label for="category">Catégorie:</label><br>
-					<select id="category" name="category"></select><br>
-					<label for="image">Image:</label><br>
-					<input type="file" id="image" name="image"><br>
+			<div class="modal-add-image-close_container">
+				<button class="js-modal-back"><i class="fa-solid fa-arrow-left"></i></button>
+				<button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
+			</div>
+			<div class="modal-images_title">
+				<h2>Ajout photo</h2>
+			</div>
+			<div class="add-article-form_container">
+				<form action="" id="article-form" class="add-article_form">
+					<div class="add-image-form_container">
+						<i class="fa-regular fa-image"></i>
+						<label for="image">+ Ajouter photo</label>
+						<input type="file" id="image" name="image">
+						<img id="preview" style="display: none;">
+						<p>jpg, png : 4mo max</p>
+					</div>
+					<!-- <input type="file" id="image" name="image"> -->
+					<label for="title">Titre</label>
+					<input type="text" id="title" name="title">
+					<label for="category">Catégorie</label>
+					<select id="category" name="category"></select>
+					<div class="modal-upload_bar__container"><div class="modal-images_bar"></div></div>
 					<button id="submit-article" class="submit">Envoyer</button>
 				</form>
 			</div>
 		</div>
 	</aside>
+
+	
 
 	<section id="contact">
 		<h2>Contact</h2>

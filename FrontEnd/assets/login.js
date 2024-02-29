@@ -22,16 +22,19 @@ function submitForm() {
         .then(data => {
             // Vérifier si la connexion a réussi
             if (data.token) {
-                // Stocker le token dans localStorage ou sessionStorage
+                // Stocker le token dans localStorage
                 localStorage.setItem('authToken', data.token);
-                // Afficher le token dans la console
-                console.log('Token récupéré :', data.token);
                 // Rediriger vers index.html
                 window.location.replace('index.html');
             } else {
-                // Afficher un message d'erreur si la connexion a échoué
-                alert('Identifiants invalides. Veuillez réessayer.', data.message);
-                console.log(data.message);
+                // Création du message d'erreur
+                const FormSection = document.getElementById('loginForm')
+                const errorMessage = document.createElement('p');
+                errorMessage.innerText = `Identifiant ou mot de passe incorrect.`;
+                errorMessage.style.textAlign = 'center';
+                errorMessage.style.color = 'red';
+                errorMessage.style.marginBottom = '15px';
+                FormSection.insertBefore(errorMessage, FormSection.lastElementChild);
             }
         })
     }
